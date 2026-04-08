@@ -21,9 +21,11 @@ Poor risk assessment thus leads to:
 - Are interest rates aligned with borrower risk?
 - Which loan segments contribute most to losses?
 - How do income, credit score, and loan purpose affect repayment behavior?
+
 # 🔬 Methodology
 Exploratory data analysis was conducted in Tableau using dashboards, 
 calculated fields, and segment-level comparisons to identify patterns in borrower behavior and loan outcomes.
+
 # 🛠️ Skills
 - Tableau
 - Exploratory Data Analysis
@@ -31,6 +33,7 @@ calculated fields, and segment-level comparisons to identify patterns in borrowe
 - Risk Analysis
 # 🔍 Findings & Recommendations
 The analysis indicates that default risk is more strongly associated with weaker credit profiles, higher debt burdens, and signs of recent credit expansion. 
+![alt text](Images/PDvOpen12M24M.png)
 Lenders should pay particular attention to borrowers with lower credit scores, high debt-to-income ratios, and many recently opened accounts. 
 These profiles may require stricter approval criteria or more risk-adjusted pricing.
 # ⏭️ Next Steps
