@@ -32,8 +32,12 @@ calculated fields, and segment-level comparisons to identify patterns in borrowe
 - Data Visualization
 - Risk Analysis
 # 🔍 Findings & Recommendations
+First, we observe that loans appear to be correctly priced: higher interest rates are associated with higher probabilities of default, consistent with risk-based pricing.
+![alt text](Images/PD_v_IR_Grade.png)
+
 The analysis indicates that default risk is more strongly associated with weaker credit profiles, higher debt burdens, and signs of recent credit expansion. 
-![alt text](Images/PDvOpen12M24M.png)
+
+![alt text](Images/PD_vs_DTI_FICO.png)
 Lenders should pay particular attention to borrowers with lower credit scores, high debt-to-income ratios, and many recently opened accounts. 
 These profiles may require stricter approval criteria or more risk-adjusted pricing.
 # ⏭️ Next Steps
