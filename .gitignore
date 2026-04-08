@@ -1,3 +1,4 @@
 *.csv
 *.twb
-*.twb
+*.twbr
+.gitignore
