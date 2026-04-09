@@ -1,7 +1,3 @@
----
-layout: page
-title: Full Analysis
----
 
 # Exploratory Data Analysis - FULL
 # Introduction
