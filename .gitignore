@@ -1,6 +1,0 @@
-*.csv
-*.twb
-*.twbr
-.gitignore
-*.hyper
-Tableau/
