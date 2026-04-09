@@ -2,3 +2,4 @@
 *.twb
 *.twbr
 .gitignore
+*.hyper
