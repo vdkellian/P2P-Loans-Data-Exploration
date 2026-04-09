@@ -1,0 +1,5 @@
+theme: minima
+
+header_pages:
+  - README.md
+  - Full_anaylsis.md
