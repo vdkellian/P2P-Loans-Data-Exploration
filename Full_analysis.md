@@ -1,3 +1,8 @@
+---
+layout: page
+title: Full Analysis
+---
+
 # Exploratory Data Analysis - FULL
 # Introduction
 LendingClub is a peer-to-peer loan platform that connects borrowers and investors, enabling individuals to obtain loans outside traditional banking channels.
