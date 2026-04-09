@@ -4,7 +4,7 @@ This project explores Lending Club peer-to-peer loan data to identify the key fa
 Key profiles are : 
 1. High credit score (FICO)
 2. High number of revolving and installment accounts opened in the last 12 months
-3. Debt to income ratio
+3. High debt-to-income ratio
 # 🎯 Business objectives
 Financial institutions need to accurately assess borrower risk to:
 - minimize loan losses by identifying risky customer profiles 
@@ -32,14 +32,10 @@ calculated fields, and segment-level comparisons to identify patterns in borrowe
 - Data Visualization
 - Risk Analysis
 # 🔍 Findings & Recommendations
-First, we observe that loans appear to be correctly priced: higher interest rates are associated with higher probabilities of default, consistent with risk-based pricing.
-![alt text](Images/PD_v_IR_Grade.png)
+Loans are correctly priced using risk risk-based assessment. However, when analyzing, lenders should pay particular attention to borrowers with lower credit scores, low salary, and many recently opened accounts, as they exhibit high default rates. 
 
-The analysis indicates that default risk is more strongly associated with weaker credit profiles, higher debt burdens, and signs of recent credit expansion. 
-![alt text](Images/PD_v_IR_Grade.svg)
-![alt text](Images/PD_vs_DTI_FICO.png)
-Lenders should pay particular attention to borrowers with lower credit scores, high debt-to-income ratios, and many recently opened accounts. 
+Surprisingly, individuals with high debt-to-income do not exhibit higher default rates, as they can sustain higher debt burden since essential expenses do not scale 1-to-1 with income, if an individual doubles their salary, they are (usually) not going to double their spendings and can thus spend more on debt.
+
 These profiles may require stricter approval criteria or more risk-adjusted pricing.
 # ⏭️ Next Steps
-Develop predictive models, including logistic regression and machine learning classifiers, 
-to estimate the probability of default more accurately at the loan application stage.
+Develop predictive models, including logistic regression and machine learning classifiers, to estimate the probability of default more accurately at the loan application stage. Pay attention to interactions between variables to estimate prediction power and accuracy (e.g. debt-to-income ratio and annual income multi-collinearity).
