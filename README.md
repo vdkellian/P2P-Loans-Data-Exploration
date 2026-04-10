@@ -1,3 +1,4 @@
+PLEASE READ FULL ANALYSIS
 
 # 📑 Executive summary
 This project explores Lending Club peer-to-peer loan data to identify the key factors influencing borrower risk, loan performance, and default probability. Using Tableau for the analysis uncovers patterns in credit characteristics, interest rates, and borrower profiles. 
