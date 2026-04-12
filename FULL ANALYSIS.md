@@ -26,14 +26,21 @@ To estimate the probability of default for a group sharing a given characteristi
 
 The probability of default of a given group is thus given by $PD = \frac{1}{n}\sum_{i=1}^{n} y_i$.
 
+# Good loans versus bad loans
+Since the dataset represents a snapshot of Lending Club loans at a given point in time, some loans may currently be classified as “late” even though they could eventually default in the future. As a result, defining bad loans solely as those already charged off may underestimate the true level of credit risk. Therefore, in this analysis, a bad loan is defined as a loan that has either already defaulted or is currently in late payment status, as these loans exhibit signs of repayment difficulty and elevated risk of future default.
+
 # Results
+## Uni-variate
+
+## Multi-variate
 First, we observe that loans appear to be correctly priced: higher interest rates are associated with higher probabilities of default, consistent with risk-based pricing.
+
 
 ## Loan amount
 The amount that can be borrowed on Lending Club goes up to 40,000$
 ![alt text](Images/PD_VS_loan_amount.svg)
 ![alt text](Images/PD_v_IR_Grade.svg)
-## Income
+### Income
 50% of defaults are caused by borrowers earning less than 50,000$ a year, and 90% by those earning less than 115,000$ year.
 
 ![alt text](Images/pct_default_v_income.svg)
@@ -45,7 +52,7 @@ Nonetheless, income still plays an important role even when debt-to-income ratio
 ![alt text](Images/PD_income.svg)
 
 
-## FICO
+### FICO
 Loans are priced correctly. As the FICO score decreases, the average interst rate increases accordingly.
 ![alt text](Images/PD&ir_VS_FICO.svg)
 
