@@ -71,3 +71,20 @@ There is no magic variable that stands out as a unique identifier of high-risk b
 The interest rates are risk-adjusted according to the risk represented by the borrower during the assessment phase. The riskier the borrower, the higher the interest rate. Interestingly, not all variables explored before are taken into account in the loan pricing.
 ![alt text](Images/avg_ir_VS_FICO&inc.svg)# Next step
 - Check multi-collinearity
+
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <div>
+
+### Interpretation
+The graph shows that the probability of default increases as income decreases.
+
+$$
+PD = \frac{1}{n}\sum_{i=1}^{n} y_i
+$$
+
+  </div>
+  <div>
+    <img src="Images/PD_income.svg" alt="PD vs Income" width="450">
+  </div>
+</div>
