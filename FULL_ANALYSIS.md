@@ -22,17 +22,14 @@ Detailed explanations of the variables, their type, timing of recording etc. can
 Lending Club specializes in loans
 
 ## Probability of default (PD)
-To estimate the probability of default for a group sharing a given characteristic, we can use the average of a binary default indicator. Because the default variable takes only two values (1 if the loan is in default or charged off, 0 otherwise), the arithmetic mean directly corresponds to the probability of default. In other words, the average represents the proportion of observations in the group that experienced default.
+To estimate the probability of default — referred to in this project as the Probability of Bad Loan — for a group sharing a specific characteristic, we can compute the average of a binary default indicator. The default variable takes only two possible values: 1 if the loan is in default or has been charged off, and 0 otherwise. Because of this binary structure, the arithmetic mean of the variable directly represents the probability of default. In other words, the average equals the proportion of loans in the group that have defaulted.
 
-The probability of default of a given group is thus given by $PD = \frac{1}{n}\sum_{i=1}^{n} y_i$.
+The probability of default (bad loan) of a given group is thus given by $PD = \frac{1}{n}\sum_{i=1}^{n} y_i$.
 
 # Good loans versus bad loans
 Since the dataset represents a snapshot of Lending Club loans at a given point in time, some loans may currently be classified as “late” even though they could eventually default in the future. As a result, defining bad loans solely as those already charged off may underestimate the true level of credit risk. Therefore, in this analysis, a bad loan is defined as a loan that has either already defaulted or is currently in late payment status, as these loans exhibit signs of repayment difficulty and elevated risk of future default.
 
 # Results
-## Uni-variate
-
-## Multi-variate
 First, we observe that loans appear to be correctly priced: higher interest rates are associated with higher probabilities of default, consistent with risk-based pricing.
 
 
@@ -59,32 +56,20 @@ Loans are priced correctly. As the FICO score decreases, the average interst rat
 FICO scores range from 300 to 850. In the dataset, there are two distinct FICO scores, the one at the date of loan application, and the most recent calculated FICO.
 
 ## Summary table
-| Variable | Effect on PD | Interpretation |
-|-|-|-|
-| Annual income | high | higher income decreases PD up to a certain threshold |
-| DTI | positive | higher leverage increases risk |
-| FICO | high | higher score → lower risk |
-| interest rate | positive | reflects risk pricing |
 
+| Variable | Effect on PD | Interpretation |
+|---------|--------------|----------------|
+| Annual income | negative | Higher income is associated with lower PD, although the effect diminishes beyond a certain level |
+| Debt-to-income (DTI) | positive | Higher leverage increases repayment burden and therefore default risk |
+| FICO score | negative | Higher credit score is associated with lower PD, reflecting stronger creditworthiness |
+| Interest rate | positive | Higher interest rates are associated with higher PD, consistent with risk-based pricing |
+| Loan amount | slightly positive | Larger loan amounts may increase repayment pressure, especially for lower-income borrowers |
+| Grade | positive | Lower grades correspond to higher PD and higher interest rates |
 There is no magic variable that stands out as a unique identifier of high-risk borrowers.
 # Loan pricing
 The interest rates are risk-adjusted according to the risk represented by the borrower during the assessment phase. The riskier the borrower, the higher the interest rate. Interestingly, not all variables explored before are taken into account in the loan pricing.
-![alt text](Images/avg_ir_VS_FICO&inc.svg)# Next step
-- Check multi-collinearity
+![alt text](Images/avg_ir_VS_FICO&inc.svg)
 
-
-<div style="display: flex; align-items: flex-start; gap: 20px;">
-  <div>
-
-### Interpretation
-The graph shows that the probability of default increases as income decreases.
-
-$$
-PD = \frac{1}{n}\sum_{i=1}^{n} y_i
-$$
-
-  </div>
-  <div>
-    <img src="Images/PD_income.svg" alt="PD vs Income" width="450">
-  </div>
-</div>
+# Next step
+- Check multi-collinearity of variables
+- calculate probabilities or default using ML classifiers
