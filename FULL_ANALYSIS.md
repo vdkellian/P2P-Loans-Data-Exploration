@@ -72,4 +72,4 @@ The interest rates are risk-adjusted according to the risk represented by the bo
 
 # Next step
 - Check multi-collinearity of variables
-- calculate probabilities or default using ML classifiers
+- calculate probabilities of default using ML classifiers and predict bad loans
